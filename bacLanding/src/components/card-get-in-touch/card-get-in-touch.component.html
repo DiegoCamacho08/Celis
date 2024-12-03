@@ -1,0 +1,28 @@
+<div class="w-100 col-12 getin d-flex align-items-center">
+    <div class="contact-form-container col-12 d-flex flex-column align-items-lg-end align-items-center justify-content-center">
+    <div class="col-9">
+    <h2 class="headline">Contáctanos</h2>
+    <form  #contactForm="ngForm">
+      <div>
+       
+        <input type="text" id="name" name="name" placeholder="Nombre" ngModel required>
+      </div>
+      <div>
+        
+        <input type="email" id="email" name="email" placeholder="Email" ngModel required>
+      </div>
+      <div>
+        <label for="message" style="text-align: left; display: block;">Mensaje</label>
+        <textarea id="message" name="message" ngModel required></textarea>
+      </div>
+      <div>
+      <button class="d-flex align-items-center" type="submit" [disabled]="true" >Enviar</button>
+    </div>
+    </form>
+    <div class="contact-info">
+      <p><a href="mailto:hello@blockchainadvance.center" style="text-decoration: none; color: white;">hello@blockchainadvance.center</a></p>
+      <p>Cordillera de los alpes norte 102</p>
+    </div>
+</div>
+    </div>
+</div>

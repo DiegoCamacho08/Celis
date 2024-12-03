@@ -1,0 +1,195 @@
+@import '../../assets/colors/colors.scss';
+
+.card {
+  min-height: 325px;
+  min-width: 100%;
+  max-width: 300px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  background-image: url("../../assets/images/cardPortfolio.svg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; 
+  color: #fff;
+  display: flex;
+  font-weight: lighter;
+  font-family: Montserrat, sans-serif;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+// .card {
+//   min-height: 366px;
+//   min-width: 272px;
+//   max-width: 272px;
+//   position: relative;
+//   color: #fff;
+//   display: flex;
+//   font-weight: lighter;
+//   font-family: Montserrat, sans-serif;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   padding: 10px;
+//   z-index: 1;
+//   border: 1px solid;
+//   border-image-source: linear-gradient(
+//     149.98deg, 
+//     rgba(74, 98, 151, 0.26) 18.51%, 
+//     #4A6297 40.92%, 
+//     #74A2CF 61.13%, 
+//     rgba(116, 162, 207, 0.13) 88.37%
+//   );
+//   border-image-slice: 1; 
+//   flex-grow: 1;
+
+  
+//   background: linear-gradient(
+//     231.55deg, 
+//     rgba(0, 115, 255, 0) 2.91%, 
+//     rgba(211, 232, 255, 0.2) 92.83%
+//   );
+//   border-radius: 8px; 
+// }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    flex-grow: 1;
+    z-index: 1;
+  }
+  
+  .card img {
+    position: absolute;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-3 {
+      flex: 0 0 100%; 
+      max-width: 100%;
+    }
+
+    .card{
+      min-height: 337px;
+    }
+  
+    .col-3 {
+      min-width: 250px; 
+    }
+  }
+  
+  .headline {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin: 0;
+    white-space: normal;
+    z-index: 2;
+
+  }
+  
+  .subheadline {
+    font-size: 1.25rem;
+    margin: 0;
+    margin-top: 5px;
+    font-weight: lighter;
+    white-space: normal;
+    text-wrap: wrap;
+    z-index: 2;
+  
+  }
+
+  .badgeBorder {
+    padding: 10px;
+    font-weight: lighter;
+  
+    $border: 1px;
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box; 
+    border: solid $border transparent; 
+    border-radius: 50%;
+    margin-bottom: 1em; 
+    
+    &:before {
+      z-index: -1;
+      margin: -$border; 
+      border-radius: inherit; 
+      background: linear-gradient(
+        to bottom right,
+        rgba($azul-fuerte, 0.26) 0%,
+        rgba($azul-fuerte, 0.7) 40%,
+        rgba($azul-claro, 0.7) 60%,
+        rgba($azul-claro, 0.13) 100%
+      );
+    }
+  }
+
+  .card-title{
+    color:#00AEEF;
+    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 10px;
+  }
+
+  .btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(137, 137, 137, 0.3);
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+.btn1 {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background:transparent;
+    border: 0px;
+
+}
+
+.d-flex.overflow-auto {
+    overflow-x: hidden; 
+    scrollbar-width: none; 
+}
+
+  .card-text{
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .services-section .d-flex {
+    gap: 20px; 
+    scroll-behavior: smooth;
+}
+
+.icon-container {
+  width: 250px; 
+  height: 200px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden; 
+}
+
+.icon-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}

@@ -1,0 +1,92 @@
+@import '../../styles.scss';
+
+.container {
+    padding: 10px;
+    color: white;
+    margin-bottom: 150px;
+    
+}
+
+.card {
+    border: none;
+    min-height: 325px;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    
+}
+
+.btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    backdrop-filter: blur(10px);
+   
+    color: #fff;
+}
+
+.btn1 {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background:transparent;
+    border: 0px;
+
+}
+
+.d-flex.overflow-auto {
+    overflow-x: hidden; 
+    scrollbar-width: none; 
+}
+
+.card .teamImg {
+    max-width: 200px;
+    height: 270px; 
+    object-fit: cover; 
+    
+}
+
+.name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    font-size: 14px;
+    color: #00BFFF; 
+}
+
+.description {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    @media (max-width: 576px) {
+        font-size: 8px; 
+        text-wrap: wrap;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00BFFF;
+}

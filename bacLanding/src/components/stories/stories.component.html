@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center text-start">
+      <div class="align-items-center justify-content-center d-flex flex-column ">
+        <div>
+          <span class="badge rounded-pill badgeBorder">Soluciones</span>
+        </div>
+        <h1 class="headline">Nuestras soluciones</h1>
+      </div>
+  
+      <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel" *ngIf="stories && stories.length">
+        <div class="carousel-inner">
+          <div class="carousel-item" *ngFor="let story of stories; let i = index" [ngClass]="{'active': i === 0}">
+            <div class="success-stories-container">
+              <div class="story">
+                <div class="text-content">
+                  <h3>Nombre del proyecto</h3>
+                  <p>{{story.project}}</p>
+  
+                  <h4>Solución</h4>
+                  <p>{{story.solution}}</p>
+                </div>
+                <div class="image-content position-relative">
+                  <div class="image-airdrop" *ngIf="story.project === 'AirDrop'"></div>
+                  <div class="opacity-layer" *ngIf="story.project === 'AirDrop'"></div>
+                  <div class="opacity-layer-2" *ngIf="story.project === 'Bitspot'"></div>
+                  <img [src]="getImagePath(story.image)" alt="Project image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <button class="carousel-control-prev  prev" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="prev">
+          <span aria-hidden="true"><img src="../../assets/images/Vector2.svg" alt="Previous"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+  
+        <button class="carousel-control-next next" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="next">
+          <span aria-hidden="true"><img src="../../assets/images/Vector.svg" alt="Next"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,49 @@
+<div class="mb-5">
+    <section class="services-section py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Sección de texto inicial -->
+                <div class="col-md-3 mb-4">
+                    <div class="text-start text-light">
+                        <div class="d-flex flex-column justify-content-center align-items-center py-3">
+                            <div>
+                                <span class="badge rounded-pill badgeBorder">Nuestro Protafolio</span>
+                            </div>
+                            <h1 class="headline">Nuestro Ecosistema</h1>
+                            <p class="subheadline opacity-75">Proyectos que definen el futur.</p>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <button class="btn1" (click)="scrollLeft()"><img src="../../assets/images/Vector2.svg" style="width: 20px;" alt=""></button>
+                            <button class="btn1" (click)="scrollRight()"><img src="../../assets/images/Vector.svg" style="width: 20px;" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carrusel de servicios -->
+                <div class="col">
+                    <div class="d-flex overflow-auto" style="scroll-behavior: smooth;" #carousel>
+                        <div class="col-3 mb-4" *ngFor="let service of services">
+                            <div class="card h-100 position-relative">
+                                <div class="card-body d-flex flex-column justify-content-end">
+                                    <div class="icon-container position-absolute" style="top: 10px; left: 50%; transform: translateX(-50%);">
+                                        <img [src]="getIconPath(service.icon)" alt="{{ service.title }}" class="icon-img" />
+                                      </div>
+                                    
+                                    
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h5 class="card-title">{{ service.title }}</h5>
+                                            <p class="card-text">{{ service.description }}</p>
+                                        </div>
+                                       
+                                        <button class="btn btn-primary" (click)="navigateToPage(service.url)"><img src="../../assets/images/Vector.svg" style="width: 20px;" alt=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
